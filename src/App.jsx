@@ -6,10 +6,18 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
+import Dashboard from './components/Dashboard'
+import UseMemo from './components/UseMemo'
+import UseEffect from './components/UseEffect'
 // import Counter from './components/Hooks/Counter'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0);
+
+  const user={
+    name: "John Doe",
+    email: "john.doe@example.com"
+  }
 
   return (
    <>
@@ -17,7 +25,12 @@ function App() {
    {/* <h1> Hello, React!</h1>
    <Counter/> */}
 
-   <Navbar/>
+   {/* <Navbar/> */}
+
+   <Dashboard user={user}/>
+
+   <UseMemo/>
+   <UseEffect/>
 
    <Routes>
    <Route path='/' element={<Home/>}/>
